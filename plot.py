@@ -78,10 +78,3 @@ def plot(
 
 def text(x, y, text="text", fontsize=13, color="black"):
 	plt.text(x, y, text, fontsize=fontsize, color=color, ha='left', va='top', transform=plt.gca().transAxes)
-
-
-# plot
-x = [20,  20, 10,  4, 1.3, 1.2, 1.1, 0.35, 0.12, 0.04, 0.025]
-y = [300, 30, 35, 13,   2,  11, 1.8, 1,  3.5,    20,   70]
-fig, ax = plot(x,y,xlim=[10**-2,3*10**1], ylim=[0.8*10**0, 4*10**2])
-plt.savefig("hi.pdf", bbox_inches="tight")
