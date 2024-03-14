@@ -25,14 +25,16 @@ def plot(
 	xlog=False,
 	ylim=[0,1],
 	ylog=False,
-	outFileName=None
+	outFileName=None,
+	label=None,
+	color="black",
 	):
 	
 	# make plot
 	fig = plt.figure(figsize=(6, 5))
 	ax = plt.axes([0.1, 0.1, 0.85, 0.85])
 
-	plt.errorbar(x, y, xerr=xerr, yerr=yerr, fmt='-o', color="red")
+	plt.errorbar(x, y, xerr=xerr, yerr=yerr, fmt='-o', color=color, label=label)
 
 	# set labels
 	ax.set_xlabel(xlabel, fontsize=18, labelpad=9, horizontalalignment='right', x=1.0)
