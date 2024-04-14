@@ -15,8 +15,8 @@ hep.style.use("CMS")
 
 
 def plot(
-	x,
-	y, 
+	x=None,
+	y=None, 
 	xerr=None, 
 	yerr=None,
 	xlabel="xlabel", 
@@ -34,7 +34,8 @@ def plot(
 	fig = plt.figure(figsize=(6, 5))
 	ax = plt.axes([0.1, 0.1, 0.85, 0.85])
 
-	plt.errorbar(x, y, xerr=xerr, yerr=yerr, fmt='-o', color=color, label=label)
+	if x != None:
+		plt.errorbar(x, y, xerr=xerr, yerr=yerr, fmt='-o', color=color, label=label)
 
 	# set labels
 	ax.set_xlabel(xlabel, fontsize=18, labelpad=9, horizontalalignment='right', x=1.0)
